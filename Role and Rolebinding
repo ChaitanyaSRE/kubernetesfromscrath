@@ -1,0 +1,38 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: ns-ros-pandc
+  name: role-for-ns-ros-pandc
+rules:
+  - apiGroups:
+      - "*"
+      - apps
+    resources:
+      - pods
+      - replicasets
+      - deployments
+    verbs:
+      - patch
+      - create
+      - update
+      - delete
+      - get
+      - watch
+      - list
+ 
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rb-for-ns-ros-pandc
+  namespace: ns-ros-pandc
+subjects:
+  - kind: ServiceAccount
+    name: pandc-cron-serviceaccount
+    apiGroup: rbac.authorization.k8s.io
+    namespace: ns-ros-pandc
+roleRef:
+  kind: Role
+  name: role-for-ns-ros-pandc
+  apiGroup: rbac.authorization.k8s.io

@@ -1,0 +1,42 @@
+In 3 ways you can assign a specific pod to the specific node
+
+1. Taint should be applied to the node
+Toleration should be mention in the deployment file
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  tolerations:
+  - key: "key"
+    operator: "Equal"
+    value: "value"
+    effect: "NoSchedule"
+  containers:
+  - name: my-container
+    image: nginx
+2. Label should be applied to the node
+nodeSelector should be mention in the deployment file
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  nodeSelector:
+    disktype: ssd
+  containers:
+  - name: my-container
+    image: nginx
+
+3 . Node affinity 
+Label the Node
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - ssd

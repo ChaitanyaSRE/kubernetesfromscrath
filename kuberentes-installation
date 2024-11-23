@@ -1,0 +1,35 @@
+MASTER NODE:
+
+sudo apt-get update -y
+sudo apt-get install docker.io -y
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+sudo apt-get install gpg
+sudo mkdir -p -m  755 /etc/apt/keyrings 
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+sudo apt-get update -y
+ sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+kubeadm init --pod-network-cidr=18.116.112.29/16 -v=9
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+export KUBECONFIG=/etc/kubernetes/admin.conf
+
+
+worker node :
+
+sudo apt-get update -y
+sudo apt-get install docker.io -y
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+sudo apt-get install gpg
+sudo mkdir -p -m  755 /etc/apt/keyrings 
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+sudo apt-get update -y
+ sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+
+kubeadm join 172.31.26.49:6443 --token erfkir.iyjgclk5jdlpwp5r         --discovery-token-ca-cert-hash sha256:7acfe9606334446881d094eef8d8c26ca7071098b8e721d248b30a447e73b32c

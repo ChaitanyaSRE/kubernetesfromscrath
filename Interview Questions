@@ -146,7 +146,65 @@ Ansible:
 33. How do you send 𝗲𝗿𝗿𝗼𝗿 𝗹𝗼𝗴𝘀 and 𝘀𝘁𝗱𝗼𝘂𝘁 𝗹𝗼𝗴𝘀 to different files in Linux?
 34. What is the 𝗻𝗼𝗵𝘂𝗽 command in Linux?
 35. What does the 𝗻𝗲𝘁𝘀𝘁𝗮𝘁 command do in Linux?
+
+
+
+.... Helm Interview Question ....
+1. What is Helm, and why is it used?
+2. Explain the components of a Helm Chart.
+3. What are Helm Charts, and what is their purpose in Kubernetes?
+4. How does Helm help with managing Kubernetes applications?
+5. What are the key differences between Helm 2 and Helm 3?
+6. How do you create a new Helm Chart?
+7. How do you install, upgrade, and delete a Helm release?
+8. What is a release in Helm, and how does it work?
+9. How does Helm handle versioning for Charts and releases?
+10. How can you roll back a Helm release to a previous version?
+11. What are the main files and directories in a Helm Chart?
+12. Explain the purpose of the values.yaml file in Helm.
+13. What is the Chart.yaml file, and what information does it contain?
+14. How are templates used in Helm Charts, and what is the role of the templates/ directory?
+15. What is helpers.tpl, and how can it simplify templating in Helm?
+16. How do you pass custom values to a Helm Chart during installation?
+17. What is the difference between values.yaml and a custom --set parameter?
+18. How do you manage sensitive information in Helm (e.g., API keys, passwords)?
+19. How does Helm handle environment-specific configurations?
+20. How can you debug a failed Helm installation or upgrade?
+21. What is a Helm repository, and how do you add one?
+22. How do you search for a specific Chart in a Helm repository?
+23. Explain the process of updating a Helm Chart from a repository.
+24. How can you create and host your own Helm repository?
+25. What is the helm repo update command used for?
+26. What are subcharts, and how are they used in Helm?
+27. What is the purpose of requirements.yaml (in Helm 2) or Chart.yaml (in Helm 3) for dependencies?
+28. Explain how Helm manages dependencies between Charts.
+29. How does Helm perform templating with Go templates?
+30. What is helmfile, and how does it enhance Helm?
+31. How do you automate Helm releases in a CI/CD pipeline?
+32. How would you handle rollbacks or updates of Helm releases in production?
+33. What is the purpose of the --atomic flag in Helm?
+34. How does Helm's --wait flag work, and why is it used in CI/CD?
+35. What are Helm hooks, and how can they be used for lifecycle management?
 36. How do you run a script at 𝗯𝗼𝗼𝘁 𝗹𝗲𝘃𝗲𝗹 in Linux?
+
+
+Common Asked DevOps Interview Questions
+1. How can you revert multiple commits without affecting the commit history in Git?
+2. Explain the difference between git revert, git reset, and git checkout. When would you use each?
+3. If you need to squash commits after pushing, how would you do it safely?
+4. Explain the process of rebasing in Git. How can it be useful in a collaborative project?
+5. What is a Git rebase conflict, and how would you resolve it?
+6. If an EC2 instance is accidentally terminated, how would you restore it?
+7. What steps would you take if an EC2 instance fails to launch due to "InsufficientInstanceCapacity"?
+8. How can you create a snapshot of a root volume in AWS without stopping the instance?
+9. Write a Jenkins pipeline script for Terraform deployment.
+10. How to create 10 EC2 machines with incremental values like 0,1,2, etc.
+11. How to terminate 9 EC2 instances and leave one EC2 machine running.
+12. How to connect on-premise to an application in a VPC cloud.
+ 13. Explain the process of creating a custom Amazon Machine Image (AMI) from an EC2 instance.
+14. What are the implications of not using Elastic IP for a production EC2 instance?
+15. Explain how to set up cross-account access for an S3 bucket.
+16. If you need to allow access to specific IP addresses to an S3 bucket, how would you configure it?
 
 
 

@@ -1,0 +1,152 @@
+******DevOps & AWS Interview Questions****** 
+ 
+General Questions
+1- Introduce yourself. 
+2- Describe a challenge you faced as a devops engineer and how you overcame it. 
+3- Would you like to work individually or in a team. 
+4 - Tell me about something where you got a chance to learn and implement from scratch. 
+5- How would you be handling a situation where you are not getting any help from your team members. 
+ 
+AWS Questions: 
+1- Launch template vs launch configuration. 
+2- How do you communicate with AWS services privately without exposing to internet. 
+3- NAT g/w vs NAT instance v/s Egress only IGW v/s IGW 
+4- Design a 3 tier infrastructure using the AWS services which should be secure and highly available. 
+5- Statefull v/s stateless firewalls. 
+6- Differentiate between NLB and ALB. 
+7- You want to redirect traffic from x.company.in to company.in/x, how to achieve it. 
+8- Your database initially performs well, but after certain month you face slowness. How to troubleshoot and fix the same. 
+ 
+K8s: 
+1- K8s architecture 
+2- Deployment v/s stateful set v/s replica set 
+3- What is config map 
+4- Role of etcd in kubernetes. 
+5- How rolling updates work in a deployment? 
+ 
+Docker: 
+1- ADD v/s COPY 
+2- Entrypoint v/s CMD 
+3- How to remove all unwanted or unused docker objects from system? 
+4- Multistage docker build. 
+5- Is docker file immutable 
+ 
+Terraform: 
+1- What does terraform init do ? 
+2- How to auto approve the terraform changes? 
+3- count v/s foreach 
+4- How to import an existing resource to terraform? 
+5- Data black in terraform. 
+6- What are provisioners in terraform? 
+7- Remote backend. 
+ 
+Linux: 
+1- How to check the list of installed packages? 
+2- Command to check kernel version. 
+3- How to create a new user and add it as sudo? 
+4- Command to check if a process called "a" is running or not. If running how stop it. 
+5- Command to list all files less than 5mb. 
+6- Hard link v/s soft link. 
+7- Commands to check disk space usage and free RAM. 
+ 
+CI/CD: 
+1- Git fetch v/s Git pull 
+2- Sonarqube quality gate vs quality profile. 
+3- What is sonar runner. 
+4- Types of pipeline in Jenkins. 
+5- Scripted vs Declarative pipeline. 
+6- Should we prefer artifactory to store artifacts or should we store them in s3. 
+7- How to upgrade plugins in Jenkins. 
+8- Usermanagement in Jenkins. 
+9- Concepts about Gitlab runners. 
+10- How to upgrade Jenkins. 
+ 
+Ansible: 
+1- loops in Ansible. 
+2- Ansible Roles. 
+3- Is Ansible idempotent? 
+4- Ansible script to install nginx. 
+5- Conditionals in Ansible. 
+
+
+******Kubernetes Interview Question******
+1. What is Kubernetes, and why is it used?
+2. Explain the components of the Kubernetes master and worker nodes.
+3. What are Pods in Kubernetes?
+4. What is the difference between a Pod and a Node?
+5. What is a Namespace, and why is it used?
+6. How does Kubernetes handle Pod failures?
+7. What are the different types of workloads in Kubernetes?
+8. How does a Deployment work?
+9. What is a StatefulSet, and when would you use it?
+10. Explain DaemonSets and provide a use case for them.
+11. What is the difference between ReplicationController, ReplicaSet, and Deployment?
+12. What is a Service in Kubernetes, and what are the different types?
+13. How does Kubernetes manage internal and external networking?
+14. What is a ClusterIP, NodePort, and LoadBalancer Service?
+15. Explain Ingress in Kubernetes and its use case.
+16. How does DNS work within a Kubernetes cluster?
+17. What are Persistent Volumes (PVs) and Persistent Volume Claims (PVCs)?
+18. Explain the process of binding a PV to a PVC.
+19. What is a StorageClass, and how does it relate to dynamic provisioning?
+20. How are ConfigMaps used in Kubernetes?
+21. What is the difference between ConfigMaps and Secrets?
+22. How can you securely manage secrets in Kubernetes?
+23. How do you scale Pods in Kubernetes?
+24. What is the Horizontal Pod Autoscaler (HPA), and how does it work?
+25. How does Cluster Autoscaler differ from HPA?
+26. What is Role-Based Access Control (RBAC) in Kubernetes?
+27. Explain the difference between Role and ClusterRole.
+28. What is a ServiceAccount, and why would you use it?
+29. How can you implement network policies for Pod communication?
+30. How do you monitor Kubernetes clusters?
+31. What tools would you use to monitor and log Kubernetes applications?
+32. What is node affinity?
+33. What is StaticPods?
+34. What is Taint and Toleration?
+35. What is Sidecar Containers and their purpose?
+36. How to debug specific container logs?Consider there are 2 containers running inside a single pod?
+37. What are the different deployment strategies in Kubernetes?
+38. Describe the process of rolling update in Kubernetes?
+
+
+****** Some Linux Interview Question *****
+1. What is the boot process in Linux?
+2. How can you create a zero-size file in Linux?
+3. What are 𝘀𝗼𝗳𝘁 𝗹𝗶𝗻𝗸𝘀 and 𝗵𝗮𝗿𝗱 𝗹𝗶𝗻𝗸𝘀 in Linux? How do you create them? What are the differences between these two types of links?
+4. What is the first line typically written in a shell script? What is its meaning? What happens if this line is omitted, and how do you run the script in such a case?
+5. How can you run a shell script in the background in Linux?
+6. What is a 𝗰𝗿𝗼𝗻𝘁𝗮𝗯 in Linux? Explain how it works and how to configure and schedule a job using crontab.
+7. How do you allow ports in Linux?
+8. How do you troubleshoot a remote server that is experiencing issues?
+9. What are the 𝗽𝗶𝗻𝗴, 𝘁𝗲𝗹𝗻𝗲𝘁, 𝗰𝘂𝗿𝗹, and 𝘄𝗴𝗲𝘁 commands in Linux?
+10. How can you check the status of services in a Linux machine?
+11. How do you kill a process in Linux?
+12. What are the 𝗻𝗶𝗰𝗲 and 𝗿𝗲𝗻𝗶𝗰𝗲 commands in Linux?
+13. What is an 𝗶𝗻𝗼𝗱𝗲 in Linux?
+14. How do you check CPU utilization in Linux?
+15. What are the differences between the 𝘁𝗼𝗽 and 𝗵𝘁𝗼𝗽 commands?
+16. What is a 𝗺𝗼𝘂𝗻𝘁 in Linux, and how do you create one?
+17. How do you troubleshoot live logs in Linux?
+18. What is the 𝘀𝗲𝗱 command in Linux?
+19. What is the 𝗮𝘄𝗸 command in Linux?
+20. What are the 𝗴𝗿𝗲𝗽 and 𝗲𝗴𝗿𝗲𝗽 commands in Linux?
+21. How can you list only directories in a Linux environment?
+22. How do you check the processes running in Linux?
+23. How do you get a Java thread dump in Linux?
+24. How can you check the running ports on a Linux machine?
+25. How do you declare a variable in a shell script?
+26. What do $?, $#, and $* represent in shell scripting?
+27. How do you read a command line input in a shell script?
+28. What is 𝘂𝗺𝗮𝘀𝗸 in Linux?
+29. How do you change file permissions in Linux?
+30. How can you connect to remote servers without a password? How is this achieved?
+31. How do you open a file in read-only mode in the vi editor?
+32. What is the purpose of the 𝗲𝘅𝗽𝗼𝗿𝘁 command in Linux?
+33. How do you send 𝗲𝗿𝗿𝗼𝗿 𝗹𝗼𝗴𝘀 and 𝘀𝘁𝗱𝗼𝘂𝘁 𝗹𝗼𝗴𝘀 to different files in Linux?
+34. What is the 𝗻𝗼𝗵𝘂𝗽 command in Linux?
+35. What does the 𝗻𝗲𝘁𝘀𝘁𝗮𝘁 command do in Linux?
+36. How do you run a script at 𝗯𝗼𝗼𝘁 𝗹𝗲𝘃𝗲𝗹 in Linux?
+
+
+

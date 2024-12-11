@@ -13,3 +13,4 @@ for n in  `kubectl get nodes |grep wk016  | awk '{print $1}'`;do  robin host  ad
 kubectl delete CustomResourceDefinition $(kubectl get CustomResourceDefinition -o name | grep f5-)
 kubectl patch pvc <pvcname> -p '{"metadata":{"finalizers":null}}'
 kubectl logs -f  <podname> -n <namespace>
+kubectl get pods -A  -owide  | grep -i wk008 | egrep -v "kube-system|robinio|ns-ie-obf-basic|snb-stackrox" | awk '{print $1}' | uniq 

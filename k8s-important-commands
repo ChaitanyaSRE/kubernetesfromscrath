@@ -1,0 +1,15 @@
+kubectl get pv -n kube-system — sort-by=.spec.capacity.storage
+kubectl get deploy -n kube-system coredns -o jsonpath='{.spec.template.spec.affinity}' | python -m json.tool
+kubectl get nodes --no-headers | awk '{print $1}' > words.txt
+kubectl get po -n kube-system -owide
+kubectl get po -A -owide | grep -v Running
+kubectl scale deploy --all -n <ns> --replicas=4
+kubectl edit cm <configmapname> -n robinio 
+for n in `kubectl get nodes --no-headers | awk '{print $1}' `; do echo "$n"; robin host info  $n | grep -i hugepage -A2 ; done
+kubectl get nodes -o custom-columns=NAME:.metadata.name,TAINTS:.spec.taints --no-headers  -> taint details
+kubectl get nodes --no-headers -o custom-columns=NAME:.metadata.name -> only node details
+for n in `kubectl get nodes --no-headers | awk '{print $1}' | `; do robin host info  $n | grep -i bmc; done
+for n in  `kubectl get nodes |grep wk016  | awk '{print $1}'`;do  robin host  add-vlans $n  --vlans 1144 --interface  sriov0 --wait;done
+kubectl delete CustomResourceDefinition $(kubectl get CustomResourceDefinition -o name | grep f5-)
+kubectl patch pvc <pvcname> -p '{"metadata":{"finalizers":null}}'
+kubectl logs -f  <podname> -n <namespace>
